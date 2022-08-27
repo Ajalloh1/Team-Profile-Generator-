@@ -13,3 +13,23 @@ console.log(Intern);
 // node modules 
 const fs = require('fs');
 const inquirer = require('inquirer');
+// team array
+const teamArray = [];
+
+// start of manager prompts 
+const addManager = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Theam manager?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Manager name!");
+                    return false;
+                }
+            }
+        },
+        {
