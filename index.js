@@ -123,3 +123,52 @@ const addEmployee = () => {
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'github',
+            message: "What is the employee's github username?",
+            when: (input) => input.role === "Engineer",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Enter the employee's github username ID please!")
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: "What is the name of the INtern's School?",
+            when: (input) => input.role === "Intern",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("enter intern's school!")
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmAddEmployee',
+            message: 'Do you want to add more employees?',
+            default: false
+        }
+    ])
+        .then(employeeData => {
+            // data for employee types 
+
+            let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+            let employee;
+
+            if (role === "Engineer") {
+                employee = new Engineer(name, id, email, github);
+
+                console.log(employee);
+
+            } else if (role === "Intern") {
+                employee = new Intern(name, id, email, school);
+
+                console.log(employee);
+            }
