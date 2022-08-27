@@ -47,3 +47,25 @@ const addManager = () => {
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: "What is the manager's office number",
+            validate: nameInput => {
+                if (isNaN(nameInput)) {
+                    console.log('Please enter the manager number')
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+    ])
+    .then(managerInput => {
+        const { name, id, email, officeNumber } = managerInput;
+        const manager = new Manager(name, id, email, officeNumber);
+
+        teamArray.push(manager);
+        console.log(manager);
+    })
+};
