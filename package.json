@@ -1,0 +1,29 @@
+{
+    "name": "team-profilegenerator-",
+    "version": "1.0.0",
+    "description": "Team Profile Generator that generates employee profile information",
+    "main": "index.js",
+    "directories": {
+        "lib": "rsc",
+        "test": "test"
+    },
+    "scripts": {
+        "test": "jest --verbose"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ajalloh1/Team-ProfileGenerator-.git"
+    },
+    "author": "Ahmadu Jalloh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ajalloh1/Team-ProfileGenerator-/issues"
+    },
+    "homepage": "https://github.com/Ajalloh1/Team-ProfileGenerator-#readme",
+    "dependencies": {
+        "inquirer": "^8.2.4"
+    },
+    "devDependencies": {
+        "jest": "^29.0.1"
+    }
+}
