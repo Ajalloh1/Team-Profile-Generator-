@@ -33,3 +33,17 @@ const addManager = () => {
             }
         },
         {
+
+            type: 'input',
+            name: 'email',
+            message: "what is the Manager's email.",
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log('Enter an email!')
+                    return false;
+                }
+            }
+        },
