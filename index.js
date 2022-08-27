@@ -97,3 +97,29 @@ const addEmployee = () => {
             }
         },
         {
+            type: 'input',
+            name: 'id',
+            message: "Please enter employee ID.",
+            validate: nameInput => {
+                if (isNaN(nameInput)) {
+                    console.log("Enter the employee's ID!")
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "Enter the email of employee.",
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log('Enter an email!')
+                    return false;
+                }
+            }
+        },
