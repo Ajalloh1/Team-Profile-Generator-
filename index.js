@@ -69,3 +69,31 @@ const addManager = () => {
         console.log(manager);
     })
 };
+const addEmployee = () => {
+    console.log(`
+    =================
+    Adding employees to the team
+    =================
+    `);
+
+    return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'role',
+            message: "what is the role of your employee",
+            choices: ['Engineer', 'Intern']
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: "What's the name of the employee?",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter an employee's name!");
+                    return false;
+                }
+            }
+        },
+        {
