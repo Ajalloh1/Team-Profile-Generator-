@@ -4,7 +4,6 @@
 
 ![Image3](./assets/img3.jpg)
 # Description
-It saves users time and allow them to spend more time on writing codes instead of worrying about writing English.
 This is a team profile generator. The application provides questions prompts to be answered by the user. 
 All the user needs to do is to answer the questions and a professional team profile generator is generated for them in a node js environment.
 
