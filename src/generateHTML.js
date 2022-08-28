@@ -1,7 +1,7 @@
-function generateCard(teamArray){
+function generateCard(teamArray) {
 
     let cardArray = [];
-    
+
     // create Manager card
     const generateManager = function (manager) {
         return `
@@ -20,9 +20,9 @@ function generateCard(teamArray){
         </div>
         `;
     }
-    
+
     ///place generate engineer function here//
-    
+
     //place generate intern fucntion here///
     const generateEngineer = function (engineer) {
         return `
@@ -58,22 +58,22 @@ function generateCard(teamArray){
         </div>
         `;
     }
-    cardArray.push(teamArray.filter(employee => employee.getRole()==="Manager")
-    .map(employee => generateManager(employee)).join("")
+    cardArray.push(teamArray.filter(employee => employee.getRole() === "Manager")
+        .map(employee => generateManager(employee)).join("")
     )
-    cardArray.push(teamArray.filter(employee => employee.getRole()==="Engineer")
-    .map(employee => generateEngineer(employee)).join("")
-    
+    cardArray.push(teamArray.filter(employee => employee.getRole() === "Engineer")
+        .map(employee => generateEngineer(employee)).join("")
+
     )
-    cardArray.push(teamArray.filter(employee => employee.getRole()==="Intern")
-    .map(employee => generateIntern(employee)).join("")
-    
+    cardArray.push(teamArray.filter(employee => employee.getRole() === "Intern")
+        .map(employee => generateIntern(employee)).join("")
+
     )
-    
+
     return cardArray.join("")
-    }
-    module.exports = teamArray => {
-        return `<!DOCTYPE html>
+}
+module.exports = teamArray => {
+    return `<!DOCTYPE html>
         <html lang="en">
         
         <head>
@@ -104,5 +104,5 @@ function generateCard(teamArray){
             </div>
         </body>
         </html>`
-    
-    }
+
+}
