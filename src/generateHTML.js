@@ -3,24 +3,40 @@ function generateCard(teamArray) {
     let cardArray = [];
 
     // create Manager card
+    //     // const generateManager = function (manager) {
+    //     return `
+    //         <div class="col-4 mt-4">
+    //             <div class="card h-100">
+    //                 <div class="card-header">
+    //                     <h3>${manager.getName()}</h3>
+    //                     <h4>Manager</h4><i class="material-icons">content_paste</i>
+    //                 </div>
+    //                 <div class="card-body">
+    //                     <p class="id">ID: ${manager.getId()}</p>
+    //                     <p class="email">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
+    //                     <p class="office">Office Number: ${manager.getOfficeNumber()}</p>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //         `;
+    // }
+    ///////
     const generateManager = function (manager) {
         return `
-        <div class="col-4 mt-4">
-            <div class="card h-100">
-                <div class="card-header">
-                    <h3>${manager.getName()}</h3>
-                    <h4>Manager</h4><i class="material-icons">content_paste</i>
+            <div class="card m-3" style="width: 16rem;">
+                <div class="card-body bg-primary text-light">
+                    <h4 class="card-title">${manager.getName()}</h4>
                 </div>
-                <div class="card-body">
-                    <p class="id">ID: ${manager.getId()}</p>
-                    <p class="email">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
-                    <p class="office">Office Number: ${manager.getOfficeNumber()}</p>
+                <div class="list-group list-group-flush">
+                    <p class="list-group-item">ID: ${manager.getId()}</p>
+                    <p class="list-group-item">Email: <a href="#"> ${anager.getEmail()}</a></p>
+                    <p class="list-group-item">${manager.getOfficeNumber()}</p>
                 </div>
             </div>
-        </div>
-        `;
-    }
+    `
+    };
 
+    ///////
     ///place generate engineer function here//
 
     //place generate intern fucntion here///
@@ -51,8 +67,8 @@ function generateCard(teamArray) {
                 </div>
                 <div class="card-body">
                     <p class="id">ID: ${intern.getId()}</p>
-                    <p class="email">Email: <a href="mailto:${intern.email}">${intern.getEmail()}</a></p>
-                    <p class="office">github: ${intern.getSchool()}</p>
+                    <p class="email">Email: <a href="mailto:${intern.email()}">${intern.getEmail()}</a></p>
+                    <p class="office">github: ${intern.school()}</p>
                 </div>
             </div>
         </div>

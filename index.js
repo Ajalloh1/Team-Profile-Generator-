@@ -22,7 +22,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'Theam manager?',
+            message: 'Who is the team manager?',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -61,13 +61,13 @@ const addManager = () => {
             }
         }
     ])
-    .then(managerInput => {
-        const { name, id, email, officeNumber } = managerInput;
-        const manager = new Manager(name, id, email, officeNumber);
+        .then(managerInput => {
+            const { name, id, email, officeNumber } = managerInput;
+            const manager = new Manager(name, id, email, officeNumber);
 
-        teamArray.push(manager);
-        console.log(manager);
-    })
+            teamArray.push(manager);
+            console.log(manager);
+        })
 };
 const addEmployee = () => {
     console.log(`
