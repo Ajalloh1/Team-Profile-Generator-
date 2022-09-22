@@ -27,11 +27,11 @@ function generateCard(teamArray) {
                 <div class="card-body bg-primary text-light">
                     <h4 class="card-title">${manager.getName()}</h4>
                 </div>
-                <div class="list-group list-group-flush">
-                    <p class="list-group-item">ID: ${manager.getId()}</p>
-                    <p class="list-group-item">Email: <a href="#"> ${anager.getEmail()}</a></p>
-                    <p class="list-group-item">${manager.getOfficeNumber()}</p>
-                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${manager.getId()}</li>
+                    <li class="list-group-item">Email: <a href="#"> ${anager.getEmail()}</a></li>
+                    <li class="list-group-item">${manager.getOfficeNumber()}</li>
+                </ul>
             </div>
     `
     };
@@ -63,33 +63,50 @@ function generateCard(teamArray) {
                 <div class="card-body bg-primary text-light">
                     <h4 class="card-title">${engineer.getName()}</h4>
                 </div>
-                <div class="list-group list-group-flush">
-                    <p class="list-group-item">ID: ${engineer.getId()}</p>
-                    <p class="list-group-item">Email: <a href="#"> ${engineer.getEmail()}</a></p>
-                    <p class="list-group-item">${engineer.getOfficeNumber()}</p>
-                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${engineer.getId()}</li>
+                    <li class="list-group-item">Email: <a href="#"> ${engineer.getEmail()}</a></li>
+                    <li class="list-group-item">${engineer.getOfficeNumber()}</li>
+                </ul>
             </div>
     `
     };
 
     /////
+    // const generateIntern = function (intern) {
+    //     return `
+    //     <div class="col-4 mt-4">
+    //         <div class="card h-100">
+    //             <div class="card-header">
+    //                 <h3>${intern.getName()}</h3>
+    //                 <h4>Manager</h4><i class="material-icons">content_paste</i>
+    //             </div>
+    //             <div class="card-body">
+    //                 <p class="id">ID: ${intern.getId()}</p>
+    //                 <p class="email">Email: <a href="mailto:${intern.email()}">${intern.getEmail()}</a></p>
+    //                 <p class="office">github: ${intern.school()}</p>
+    //             </div>
+    //         </div>
+    //     </div>
+    //     `;
+    // }
+    /////
     const generateIntern = function (intern) {
         return `
-        <div class="col-4 mt-4">
-            <div class="card h-100">
-                <div class="card-header">
-                    <h3>${intern.getName()}</h3>
-                    <h4>Manager</h4><i class="material-icons">content_paste</i>
+            <div class="card m-3" style="width: 16rem;">
+                <div class="card-body bg-primary text-light">
+                    <h4 class="card-title">${intern.getName()}</h4>
                 </div>
-                <div class="card-body">
-                    <p class="id">ID: ${intern.getId()}</p>
-                    <p class="email">Email: <a href="mailto:${intern.email()}">${intern.getEmail()}</a></p>
-                    <p class="office">github: ${intern.school()}</p>
-                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${intern.getId()}</li>
+                    <li class="list-group-item">Email: <a href="#"> ${intern.getEmail()}</a></li>
+                    <li class="list-group-item">${intern.getOfficeNumber()}</li>
+                </ul>
             </div>
-        </div>
-        `;
-    }
+    `
+    };
+
+    /////
     cardArray.push(teamArray.filter(employee => employee.getRole() === "Manager")
         .map(employee => generateManager(employee)).join("")
     )
