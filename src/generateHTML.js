@@ -35,28 +35,44 @@ function generateCard(teamArray) {
             </div>
     `
     };
-
     ///////
     ///place generate engineer function here//
 
     //place generate intern fucntion here///
+    //     // const generateEngineer = function (engineer) {
+    //     return `
+    //         <div class="col-4 mt-4">
+    //             <div class="card h-100">
+    //                 <div class="card-header">
+    //                     <h3>${engineer.getName()}</h3>
+    //                     <h4>Manager</h4><i class="material-icons">content_paste</i>
+    //                 </div>
+    //                 <div class="card-body">
+    //                     <p class="id">ID: ${engineer.getId()}</p>
+    //                     <p class="email">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
+    //                     <p class="office">github: ${engineer.getGithub()}</p>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //         `;
+    // }
+    /////
     const generateEngineer = function (engineer) {
         return `
-        <div class="col-4 mt-4">
-            <div class="card h-100">
-                <div class="card-header">
-                    <h3>${engineer.getName()}</h3>
-                    <h4>Manager</h4><i class="material-icons">content_paste</i>
+            <div class="card m-3" style="width: 16rem;">
+                <div class="card-body bg-primary text-light">
+                    <h4 class="card-title">${engineer.getName()}</h4>
                 </div>
-                <div class="card-body">
-                    <p class="id">ID: ${engineer.getId()}</p>
-                    <p class="email">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
-                    <p class="office">github: ${engineer.getGithub()}</p>
+                <div class="list-group list-group-flush">
+                    <p class="list-group-item">ID: ${engineer.getId()}</p>
+                    <p class="list-group-item">Email: <a href="#"> ${engineer.getEmail()}</a></p>
+                    <p class="list-group-item">${engineer.getOfficeNumber()}</p>
                 </div>
             </div>
-        </div>
-        `;
-    }
+    `
+    };
+
+    /////
     const generateIntern = function (intern) {
         return `
         <div class="col-4 mt-4">
