@@ -3,24 +3,6 @@ function generateCard(teamArray) {
     let cardArray = [];
 
     // create Manager card
-    //     // const generateManager = function (manager) {
-    //     return `
-    //         <div class="col-4 mt-4">
-    //             <div class="card h-100">
-    //                 <div class="card-header">
-    //                     <h3>${manager.getName()}</h3>
-    //                     <h4>Manager</h4><i class="material-icons">content_paste</i>
-    //                 </div>
-    //                 <div class="card-body">
-    //                     <p class="id">ID: ${manager.getId()}</p>
-    //                     <p class="email">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
-    //                     <p class="office">Office Number: ${manager.getOfficeNumber()}</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         `;
-    // }
-    ///////
     const generateManager = function (manager) {
         return `
             <div class="card m-3" style="width: 16rem;">
@@ -29,7 +11,7 @@ function generateCard(teamArray) {
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${manager.getId()}</li>
-                    <li class="list-group-item">Email: <a href="#"> ${anager.getEmail()}</a></li>
+                    <li class="list-group-item">Email: <a href="#"> ${manager.getEmail()}</a></li>
                     <li class="list-group-item">${manager.getOfficeNumber()}</li>
                 </ul>
             </div>
@@ -37,26 +19,6 @@ function generateCard(teamArray) {
     };
     ///////
     ///place generate engineer function here//
-
-    //place generate intern fucntion here///
-    //     // const generateEngineer = function (engineer) {
-    //     return `
-    //         <div class="col-4 mt-4">
-    //             <div class="card h-100">
-    //                 <div class="card-header">
-    //                     <h3>${engineer.getName()}</h3>
-    //                     <h4>Manager</h4><i class="material-icons">content_paste</i>
-    //                 </div>
-    //                 <div class="card-body">
-    //                     <p class="id">ID: ${engineer.getId()}</p>
-    //                     <p class="email">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
-    //                     <p class="office">github: ${engineer.getGithub()}</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         `;
-    // }
-    /////
     const generateEngineer = function (engineer) {
         return `
             <div class="card m-3" style="width: 16rem;">
@@ -74,23 +36,6 @@ function generateCard(teamArray) {
 
     /////
     // const generateIntern = function (intern) {
-    //     return `
-    //     <div class="col-4 mt-4">
-    //         <div class="card h-100">
-    //             <div class="card-header">
-    //                 <h3>${intern.getName()}</h3>
-    //                 <h4>Manager</h4><i class="material-icons">content_paste</i>
-    //             </div>
-    //             <div class="card-body">
-    //                 <p class="id">ID: ${intern.getId()}</p>
-    //                 <p class="email">Email: <a href="mailto:${intern.email()}">${intern.getEmail()}</a></p>
-    //                 <p class="office">github: ${intern.school()}</p>
-    //             </div>
-    //         </div>
-    //     </div>
-    //     `;
-    // }
-    /////
     const generateIntern = function (intern) {
         return `
             <div class="card m-3" style="width: 16rem;">
