@@ -13,10 +13,10 @@ console.log(Intern);
 // node modules 
 const fs = require('fs');
 const inquirer = require('inquirer');
-// team array
+// team profile generator array//
 const teamArray = [];
 
-// start of manager prompts 
+// start of manager prompts name with if statements requiring a name//
 const addManager = () => {
     return inquirer.prompt([
         {
@@ -27,11 +27,12 @@ const addManager = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log("Manager name!");
+                    console.log("invalide entry, please enter a name!");
                     return false;
                 }
             }
         },
+        // start of manager email prompts with if statements requiring a email format and characteristics//
         {
 
             type: 'input',
@@ -42,18 +43,19 @@ const addManager = () => {
                 if (valid) {
                     return true;
                 } else {
-                    console.log('Enter an email!')
+                    console.log('you must enter an eamil')
                     return false;
                 }
             }
         },
+        // start of manager officeNumber prompts with if statements requiring numbers if not return false and re-prompt//
         {
             type: 'input',
             name: 'officeNumber',
             message: "What is the manager's office number",
             validate: nameInput => {
                 if (isNaN(nameInput)) {
-                    console.log('Please enter the manager number')
+                    console.log('Please enter numerics')
                     return false;
                 } else {
                     return true;
@@ -75,6 +77,8 @@ const addEmployee = () => {
     Adding employees to the team
     =================
     `);
+    // start of engineer prompts for adding employee profile with if statements requiring name, and role of
+    // / employee (engineer or intern) if not return false and re-prompt//
 
     return inquirer.prompt([
         {
@@ -83,6 +87,8 @@ const addEmployee = () => {
             message: "what is the role of your employee",
             choices: ['Engineer', 'Intern']
         },
+        // start of employee prompts with if statements requiring name of employee if not return false and re-prompt//
+
         {
             type: 'input',
             name: 'name',
@@ -96,6 +102,8 @@ const addEmployee = () => {
                 }
             }
         },
+        // start of employee prompts with if statements requiring ID of employee if not return false and re-prompt//
+
         {
             type: 'input',
             name: 'id',
@@ -109,6 +117,8 @@ const addEmployee = () => {
                 }
             }
         },
+        // start of employee email prompts with if statements requiring a email format and characteristics if not return false and reprompt//
+
         {
             type: 'input',
             name: 'email',
@@ -123,6 +133,8 @@ const addEmployee = () => {
                 }
             }
         },
+        // employee's gitHub prompts with if statements requiring a a gitHub user if not return false and re-prompt//
+
         {
             type: 'input',
             name: 'github',
@@ -136,6 +148,7 @@ const addEmployee = () => {
                 }
             }
         },
+        // intern/employee's school prompts with if statements requiring a school name if not return false and re-prompt//
         {
             type: 'input',
             name: 'school',
@@ -149,6 +162,7 @@ const addEmployee = () => {
                 }
             }
         },
+        ///end of minimum required profiles, confirm end or add more///
         {
             type: 'confirm',
             name: 'confirmAddEmployee',
@@ -157,7 +171,7 @@ const addEmployee = () => {
         }
     ])
         .then(employeeData => {
-            // data for employee types 
+            // employee data required to be entered///
 
             let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
             let employee;
