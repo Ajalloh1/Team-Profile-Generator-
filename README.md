@@ -28,6 +28,5 @@ Your file will be generated.
 Third party contributions are allowed, but you must first contact the author.
 
 
-# User Story
 ## videoDemo: https://drive.google.com/file/d/1KpunJ5Mgyd5LlG7HyKEWN9A2TQwffntH/view
 ## git user https://github.com/Ajalloh1
