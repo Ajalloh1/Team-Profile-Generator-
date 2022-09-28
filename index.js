@@ -139,7 +139,7 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'school',
-            message: "What is the name of the INtern's School?",
+            message: "What is the name of the Intern's School?",
             when: (input) => input.role === "Intern",
             validate: nameInput => {
                 if (nameInput) {

@@ -28,7 +28,7 @@ function generateCard(teamArray) {
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${engineer.getId()}</li>
                     <li class="list-group-item">Email: <a href="#"> ${engineer.getEmail()}</a></li>
-                    <li class="list-group-item">${engineer.getOfficeNumber()}</li>
+                    <li class="list-group-item">${engineer.getGithub()}</li>
                 </ul>
             </div>
     `
@@ -45,7 +45,7 @@ function generateCard(teamArray) {
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${intern.getId()}</li>
                     <li class="list-group-item">Email: <a href="#"> ${intern.getEmail()}</a></li>
-                    <li class="list-group-item">${intern.getOfficeNumber()}</li>
+                    <li class="list-group-item">${intern.getSchool()}</li>
                 </ul>
             </div>
     `
