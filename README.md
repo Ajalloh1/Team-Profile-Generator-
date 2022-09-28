@@ -5,8 +5,6 @@
 3. [Usage](#usage)
 5. [Contributing](#contributing)
 6. [Tests](#tests)
-8. [Questions](#questions)
-
 
 ![Image1](./assets/img1.png)
 
@@ -25,7 +23,7 @@ To install the application, you will need to download the file in the repository
 Once the file is successfully installed, you can then follow up with running it in node. Answer all questions, some are required. 
 Your file will be generated.
 # Contributing
-Third party contributions are allowed, but you must first contact the author.
+Contributions are welcome, please contact the author via github or email below. Thank you
 
 
 ## videoDemo: https://drive.google.com/file/d/1KpunJ5Mgyd5LlG7HyKEWN9A2TQwffntH/view
